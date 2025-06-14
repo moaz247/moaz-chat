@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Moaz Chat</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <header>Moaz Ehab Chat</header>
+
+    <div id="login-screen">
+      <h2 style="margin: 15px 0;">Enter your name</h2>
+      <input type="text" id="username" placeholder="Your name" />
+      <button onclick="enterChat()">Enter Chat</button>
+    </div>
+
+    <div id="chat-screen">
+      <h3 style="margin: 10px 0;">Welcome, <span id="userDisplay"></span></h3>
+
+      <select id="recipientSelect"></select>
+      <input type="text" id="messageInput" placeholder="Type your message..." />
+      <button onclick="sendMessage()">Send</button>
+
+      <div id="chatBox"></div>
+    </div>
+  </div>
+
+  <!-- Firebase CDN -->
+  <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-firestore-compat.js"></script>
+
+  <!-- Script -->
+  <script src="script.js"></script>
+</body>
+</html>
